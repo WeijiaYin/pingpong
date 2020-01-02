@@ -16,7 +16,7 @@ def calcuate_matrix():
     var2.set(k2)
     k12 = np.array(strassen.matrix_addition(k2,strassen.add_zeros(matrix)))
     var3.set(k12)
-    player_x = find_playerx.find_player_x(matrix, k12)
+    player_x = find_playerx.find_player_x(len(matrix), k12)
     var4.set(player_x)
 
 

@@ -1,7 +1,7 @@
-def find_player_x(matrix, k12):
-    player_x = list(range(0, len(matrix)))
-    for i in range(len(matrix)):
-        for j in range(len(matrix)):
+def find_player_x(length, k12):
+    player_x = list(range(0, length))
+    for i in range(length):
+        for j in range(length):
             if i != j:
                 if k12[i][j] == 0:
                     player_x.remove(i)
@@ -12,3 +12,4 @@ def find_player_x(matrix, k12):
             f.write('\t')
         f.close()
     return player_x
+
