@@ -2,6 +2,7 @@ import numpy as np
 import generate
 import readFile
 import strassen
+import find_playerx
 import tkinter as tk
 
 
@@ -15,13 +16,7 @@ def calcuate_matrix():
     var2.set(k2)
     k12 = np.array(strassen.matrix_addition(k2,strassen.add_zeros(matrix)))
     var3.set(k12)
-    player_x = list(range(0, len(matrix)))
-    for i in range(len(matrix)):
-        for j in range(len(matrix)):
-            if i != j:
-                if k12[i][j] == 0:
-                    player_x.remove(i)
-                    break
+    player_x = find_playerx.find_player_x(matrix, k12)
     var4.set(player_x)
 
 
