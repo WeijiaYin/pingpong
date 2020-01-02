@@ -73,8 +73,8 @@ def strassen(matrix_a, matrix_b):
 def add_zeros(a):
     if (len(a) & (len(a)-1))!=0:
         for i in range(int(math.pow(2, int(math.sqrt(len(a)))+1)-len(a))):
-            b = np.zeros(len(a))
-            c = np.zeros(len(a)+1)
+            b = np.zeros(len(a), dtype='int')
+            c = np.zeros(len(a)+1, dtype='int')
             a = np.column_stack((np.row_stack((a, b)),c))
     return a
 
